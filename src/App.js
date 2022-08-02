@@ -9,9 +9,13 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className='App'>
-        <div className='container-fluid container-fluid--primary'>
+        <div className='container-fluid container-fluid--primary header__scroll'>
             <div className='container'>
                 <Header />
+            </div>
+        </div>
+        <div className='container-fluid container-fluid--primary'>
+            <div className='container'>
                 <Hero />
             </div>
         </div>

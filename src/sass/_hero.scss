@@ -2,6 +2,7 @@
 
 .hero {
     display: flex;
+    margin-top: $header-height;
     // position: relative;
 
     &__text {
@@ -39,7 +40,7 @@
             transition: 0.15s;
 
             & img {
-                filter: brightness(0) invert(1);
+                background-color: white;
             }
 
             &:hover {
@@ -70,6 +71,7 @@
         height: $numbers-height;
         transform: translateX(-50%);
         width: 110.3rem;
+        z-index: 1;
 
         &__group {
             position: relative;

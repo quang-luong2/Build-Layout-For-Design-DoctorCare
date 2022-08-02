@@ -5,6 +5,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 1103px;
+    z-index: 2;
+    top: 0;
 
     &__logo {
         width: 13.3rem;
@@ -63,6 +67,32 @@
             background-color: $primary-color;
             color: white;
         }
+
+        &--color {
+            border: 1px solid white;
+            color: white;
+        }
+    }
+
+    &__menu {
+        &__icon {
+            display: none;
+        }
+    }
+
+    &--color {
+        & li {
+            & a {
+                color: #F7F9F9;
+                opacity: 60%;
+                &:hover {
+                    color: #F7F9F9;
+                }
+                &::before {
+                    background-color: #F7F9F9;
+                }
+            }
+        }
     }
 }
 
@@ -72,5 +102,23 @@
     }
     to {
         transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .header {
+        &__list {
+            display: none;
+        }
+
+        &__btn {
+            display: none;
+        }
+
+        &__menu {
+            &__icon {
+                display: block;
+            }
+        }
     }
 }

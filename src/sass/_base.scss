@@ -38,6 +38,14 @@ body {
         &--four {
             background-color: $primary-color;
         }
+
+        &--scroll {
+            background-color: $primary-color;
+            position: fixed;
+            height: $header-height;
+            transition: 0.1s linear;
+            z-index: 10;
+        }
     }
 }
 
@@ -48,4 +56,19 @@ ul {
 a {
     text-decoration: none;
     color: unset;
+}
+
+// @media only screen and (min-width: 768px) and (max-width: 1023px){
+//     .container {
+//         &--850 {
+//             max-width: 850px;
+//         }
+//     }
+// }
+
+@media only screen and (max-width: 767px){
+    .container {
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+    }
 }
