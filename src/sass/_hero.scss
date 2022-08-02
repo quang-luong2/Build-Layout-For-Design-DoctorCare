@@ -1,0 +1,100 @@
+@import './variables';
+
+.hero {
+    display: flex;
+    // position: relative;
+    &__text {
+        margin-top: 8rem;
+        padding-right: 5rem;
+
+        &__heat {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: $primary-color;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.6rem;
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 5.2rem;
+            color:  $secondary-color;
+            margin-bottom: 2.4rem;
+        }
+
+        &__subtitle {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: $secondary-color;
+            margin-bottom: 3.2rem;
+        }
+
+        &__btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.7rem 3.2rem;
+            width: 26.3rem;
+            transition: 0.15s;
+
+            & img {
+                filter: brightness(0) invert(1);
+            }
+
+            &:hover {
+                background-color: #00453A;
+            }
+        }
+
+        &__link {
+            color: white;
+        }
+    }
+
+    &__image {
+        padding-right: 3rem;
+    }
+
+    &__numbers {
+        position: absolute;
+        bottom: calc(#{-$numbers-height} / 2);
+        left: 50%;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        border: 1px solid black; //DCE9E2
+        border-radius: 6px;
+        padding: 6rem 12rem;
+        height: $numbers-height;
+        transform: translateX(-50%);
+        width: calc(#{$container-width} - (#{$container-padding} * 2));
+
+        &__group {
+            position: relative;
+
+            &:not(:last-child)::after {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                background-color: #00856F;
+                right: -50%;
+                top: 0;
+                opacity: 0.5;
+            }
+        }
+
+        &__title {
+            font-size: 4.8rem;
+            font-weight: 700;
+            color: $secondary-color;
+        }
+
+        &__text {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: $primary-color;
+            padding-top: 0.4rem;
+        }
+    }
+}

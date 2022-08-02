@@ -1,0 +1,43 @@
+@import './variables';
+
+.servicos {
+    padding-top: 26.3rem;
+
+    &__text {
+        text-align: center;
+
+        &__title {
+            font-size: 4rem;
+            font-weight: 700;
+            color: $secondary-color;
+        }
+    }
+
+    &__card {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 4rem;
+        margin-top: 6.4rem;
+        margin-bottom: 16rem;
+
+        &__item {
+            border: 1px solid #DCE9E2;
+            border-radius: 6px;
+            padding: 2.4rem;
+
+            & img {
+                margin-bottom: 1.6rem;
+            }
+        }
+
+        &__title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            padding-bottom: 1.6rem;
+        }
+
+        &__text {
+            font-size: 1.6rem;
+        }
+    }
+}
