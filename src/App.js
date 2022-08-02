@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Servicos from './components/Servicos';
 import Sobre from './components/Sobre';
+import Contato from './components/Contato';
 
 function App() {
   return (
@@ -21,6 +22,11 @@ function App() {
         <div className='container-fluid container-fluid--third'>
             <div className='container'>
                 <Sobre />
+            </div>
+        </div>
+        <div className='container-fluid'>
+            <div className='container'>
+                <Contato />
             </div>
         </div>
     </div>

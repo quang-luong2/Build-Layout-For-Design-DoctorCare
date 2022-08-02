@@ -1,0 +1,32 @@
+@import './variables';
+
+.contato {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16rem 0;
+
+    &__image {
+        margin-left: 14rem;
+    }
+
+    &__title {
+        &--padding {
+            padding-bottom: 4rem;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        padding-bottom: 1.6rem;
+
+        &:last-of-type {
+            padding-bottom: 4rem;
+        }
+
+        & img {
+            padding-right: 0.8rem;
+        }
+
+    }
+}
