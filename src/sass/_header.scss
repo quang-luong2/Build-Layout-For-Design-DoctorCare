@@ -75,7 +75,7 @@
     }
 
     &__menu {
-        &__icon {
+        &__icon, &__close {
             display: none;
         }
     }
@@ -85,6 +85,7 @@
             & a {
                 color: #F7F9F9;
                 opacity: 60%;
+
                 &:hover {
                     color: #F7F9F9;
                 }
@@ -93,6 +94,16 @@
                 }
             }
         }
+    }
+
+    & .header__menu__close {
+        display: none;
+    }
+    &.playing .header__menu__icon {
+        display: none;
+    }
+    &.playing .header__menu__close {
+        display: block;
     }
 }
 
@@ -107,8 +118,37 @@
 
 @media only screen and (max-width: 767px){
     .header {
+        width: 45%;
+        
+        &__logo {
+            z-index: 1;
+        }
+
         &__list {
+            position: absolute;
+            right: 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: $primary-color;
             display: none;
+            flex-direction: column;
+            align-items: center;
+            margin-left: -2.4rem;
+            text-align: center;
+            padding-top: calc(#{$header-height + 6rem});
+        }
+
+        &__item {
+            padding-bottom: 4.8rem;
+
+            & a {
+                color: #FFFAF1;
+                opacity: 1;
+                font-size: 2.4rem;
+            }
         }
 
         &__btn {
@@ -118,6 +158,10 @@
         &__menu {
             &__icon {
                 display: block;
+            }
+            &__close {
+                z-index: 1;
+                margin-right: 1rem;
             }
         }
     }

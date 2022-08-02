@@ -1,5 +1,5 @@
 import images_woman from '../assets/images/image-woman.png'
-import icon_whatapp from '../assets/images/whatsapp.svg'
+import icon_whatapp from '../assets/images/whatsapp.png'
 
 function Hero() {
     return (

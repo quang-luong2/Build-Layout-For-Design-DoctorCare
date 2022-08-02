@@ -1,6 +1,6 @@
 import icon_map from '../assets/images/map.svg'
 import icon_mail from '../assets/images/mail.svg'
-import icon_whatapp from '../assets/images/whatsapp.svg'
+import icon_whatapp from '../assets/images/whatsapp.png'
 import image_smile from '../assets/images/smile.png'
 
 
