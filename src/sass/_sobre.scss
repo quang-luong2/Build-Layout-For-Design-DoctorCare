@@ -1,0 +1,20 @@
+@import './variables';
+
+.sobre {
+    display: flex;
+    align-items: center;
+    padding: 16rem 0;
+
+    &__image {
+        width: 50%;
+    }
+    &__group {
+        flex: 1;
+    }
+
+    &__title {
+        &--padding {
+            padding-bottom: 2.4rem;
+        }
+    }
+}

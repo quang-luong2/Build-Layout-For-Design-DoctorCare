@@ -5,7 +5,7 @@ function Servicos() {
       <section className='servicos'>
            <div className='servicos__text'>
                 <p className='hero__text__heat'>SERVIÇOS</p>
-                <h2 className='servicos__text__title'>Como podemos ajudá-lo a se sentir melhor?</h2>
+                <h2 className='servicos__text__title servicos__text__title--width'>Como podemos ajudá-lo a se sentir melhor?</h2>
            </div>
            <div className='servicos__card'>
                 <div className='servicos__card__item'>
