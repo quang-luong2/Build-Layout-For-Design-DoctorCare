@@ -6,7 +6,7 @@ import image_smile from '../assets/images/smile.png'
 
 function Contato() {
   return (
-    <div className='contato'>
+    <section className='contato'>
         <div className='contato__group'>
             <p className='servicos__text__title contato__title--padding'>Entre em contato com a gente!</p>
             <div className='contato__contact'>
@@ -25,7 +25,7 @@ function Contato() {
         <div className='contato__image'>
             <img src={image_smile} alt='Hình Ảnh' />
         </div>
-    </div>
+    </section>
   );
 }
 

@@ -1,10 +1,10 @@
-import logo from '../assets/images/Logo.svg'
+import logo_black from '../assets/images/Logo-black.svg'
 
 function Header() {
     return (
       <header className='header'>
             <a href='#1' className='header__logo'>
-                <img src={logo} alt='Logo' />
+                <img src={logo_black} alt='Logo' />
             </a>
             <ul className='header__list'>
                 <li className='header__item'><a href='#1'>Início</a></li>

@@ -3,6 +3,7 @@
 .hero {
     display: flex;
     // position: relative;
+
     &__text {
         margin-top: 8rem;
         padding-right: 5rem;
@@ -53,11 +54,12 @@
 
     &__image {
         padding-right: 3rem;
+        padding-bottom: 5.5rem;
     }
 
     &__numbers {
         position: absolute;
-        bottom: calc(#{-$numbers-height} / 2);
+        bottom: calc((#{-$numbers-height} / 2) - 5.5rem);
         left: 50%;
         display: flex;
         justify-content: space-between;
@@ -67,7 +69,7 @@
         padding: 6rem 12rem;
         height: $numbers-height;
         transform: translateX(-50%);
-        width: calc(#{$container-width} - (#{$container-padding} * 2));
+        width: 110.3rem;
 
         &__group {
             position: relative;
@@ -88,6 +90,7 @@
             font-size: 4.8rem;
             font-weight: 700;
             color: $secondary-color;
+            text-align: center;
         }
 
         &__text {

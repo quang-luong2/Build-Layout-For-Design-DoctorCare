@@ -32,8 +32,11 @@ body {
         &--secondary {
             background-color: #F7F9F9;
         }
-        &__third {
+        &--third {
             background-color: #FFFAF1;
+        }
+        &--four {
+            background-color: $primary-color;
         }
     }
 }
