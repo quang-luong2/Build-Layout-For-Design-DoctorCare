@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    width: 1103px;
+    width: $container-width;
     z-index: 2;
     top: 0;
 
@@ -113,6 +113,16 @@
     }
     to {
         transform: scale(1);
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1299px){
+    .header {
+        width: 95%;
+
+        &__item {
+            width: 8rem;
+        }
     }
 }
 

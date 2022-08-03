@@ -66,12 +66,13 @@
         padding: 6rem 12rem;
         height: $numbers-height;
         transform: translateX(-50%);
-        width: 110.3rem;
+        width: $container-width;
         z-index: 7;
 
         &__group {
             position: relative;
             text-align: center;
+            width: calc(100% / 3);
 
             &:not(:last-child)::after {
                 content: "";
@@ -79,7 +80,7 @@
                 width: 1px;
                 height: 100%;
                 background-color: #00856F;
-                right: -50%;
+                right: 0;
                 top: 0;
                 opacity: 0.5;
             }
@@ -97,6 +98,29 @@
             font-weight: 400;
             color: $primary-color;
             padding-top: 0.4rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1299px){
+    .hero {
+        &__text {
+            padding-right: unset;
+
+            &__title {
+                font-size: 3.5rem;
+            }
+        }
+
+        &__image {
+            padding-right: unset;
+            width: 50%;
+        }
+
+        &__numbers {
+            width: 100%;
+            height: calc(#{$numbers-height} - 3rem);
+            padding: 3rem 5rem;
         }
     }
 }
@@ -120,14 +144,18 @@
 
         &__numbers {
             flex-direction: column;
-            width: 87%;
+            width: 100%;
             padding: 4rem 7rem;
             height: $numbers-height-mobile;
             bottom: calc(-#{$numbers-height-mobile} / 2);
 
             &__group {
                 margin-bottom: 6rem;
+                width: 100%;
 
+                &::after {
+                    display: none;
+                }
                 &:last-of-type {
                     margin-bottom: unset;
                 }
