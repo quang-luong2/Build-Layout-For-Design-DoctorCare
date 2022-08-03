@@ -17,7 +17,7 @@ function Contato() {
                 <img src={icon_mail} alt='Icon mail' />
                 <p className='servicos__card__text'>contato@doctorcare.com</p>
             </div>
-            <a href='#1' className='btn hero__text__btn'> 
+            <a href='#1' className='btn hero__text__btn contato__btn--left'> 
                 <img src={icon_whatapp} alt='Icon WhatApp'></img>
                 <p className='hero__text__link'>Agende sua consulta</p>
             </a>

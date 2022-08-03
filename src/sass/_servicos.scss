@@ -46,3 +46,23 @@
         }
     }
 }
+
+@media only screen and (max-width: 767px){
+    .servicos {
+        &__text {
+            &__title {
+                font-size: 3rem;
+
+                &--width {
+                    width: unset;
+                }
+            }
+        }
+
+        &__card {
+            grid-template-columns: 1fr;
+            grid-gap: 3.2rem;
+            margin-bottom: 10rem;
+        }
+    }
+}

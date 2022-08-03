@@ -118,7 +118,7 @@
 
 @media only screen and (max-width: 767px){
     .header {
-        width: 45%;
+        width: 87%;
         
         &__logo {
             z-index: 1;
@@ -143,6 +143,7 @@
 
         &__item {
             padding-bottom: 4.8rem;
+            width: 100%;
 
             & a {
                 color: #FFFAF1;
@@ -153,6 +154,25 @@
 
         &__btn {
             display: none;
+
+            &--white {
+                position: absolute;
+                z-index: 15;
+                bottom: -50vh;
+                background-color: white;
+                display: block;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80%;
+                text-align: center;
+                padding: 1.6rem 0;
+                font-size: 1.8rem;
+
+                &:hover {
+                    background-color: white;
+                    color: $primary-color;
+                }
+            }
         }
 
         &__menu {
@@ -163,6 +183,19 @@
                 z-index: 1;
                 margin-right: 1rem;
             }
+
+            &__social {
+                z-index: 15;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                bottom: -60vh;
+            }
+        }
+
+        &--unset {
+            margin-right: unset !important;
         }
     }
 }

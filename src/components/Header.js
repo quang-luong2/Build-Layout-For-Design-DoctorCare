@@ -1,7 +1,12 @@
 import logo_black from '../assets/images/Logo-black.svg'
 import logo_white from '../assets/images/Logo-white.svg'
-import icon_menu_mobile from '../assets/images/header-menu-icon.png'
+import icon_menu_mobile_white from '../assets/images/header-menu-icon-white.png'
+import icon_menu_mobile_green from '../assets/images/header-menu-icon-green.png'
 import icon_menu_close from '../assets/images/header-menu-close.png'
+import icon_instagram from '../assets/images/instagram.png'
+import icon_facebook from '../assets/images/facebook.png'
+import icon_youtube from '../assets/images/youtube.png'
+
 
 import { useEffect, useState } from 'react';
 
@@ -60,8 +65,22 @@ function Header() {
                 <li className='header__item'><a href='#1'>Depoimentos</a></li>
             </ul>
             <a href='#1' className={`btn header__btn ${isScroll ? 'header__btn--color' : ''}`}>Agendar consulta</a>
-            <img src={icon_menu_mobile} onClick={handleClickMenu} className='header__menu__icon' alt='icon menu' />
+            <img src={isScroll ? icon_menu_mobile_white : icon_menu_mobile_green} onClick={handleClickMenu} className={`header__menu__icon ${isScroll ? 'header__menu__icon--white' : ''}`} alt='icon menu' />
             <img src={icon_menu_close} onClick={handleClickMenu} className='header__menu__close' alt='icon menu' />
+            {
+                isClickMenu ?
+                    <div className={`footer__social ${isClickMenu ? 'header__menu__social'  : ''}`}>
+                        <a href='#1'><img src={icon_instagram} alt='Icon instagram' /></a>
+                        <a href='#1'><img src={icon_facebook} alt='Icon facebook' /></a>
+                        <a href='#1'><img src={icon_youtube} className={isClickMenu ? 'header--unset' : ''} alt='Icon youtube' /></a>
+                    </div>
+                : ''
+            }
+            {
+                isClickMenu ?
+                    <a href='#1' className={`btn header__btn ${isClickMenu ? 'header__btn--white' : ''}`}>Agendar consulta</a>
+                : ''
+            }
       </header>
     );
   }

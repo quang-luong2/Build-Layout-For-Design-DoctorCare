@@ -3,7 +3,7 @@
 .hero {
     display: flex;
     margin-top: $header-height;
-    // position: relative;
+    position: relative;
 
     &__text {
         margin-top: 8rem;
@@ -56,7 +56,7 @@
 
     &__numbers {
         position: absolute;
-        bottom: calc((#{-$numbers-height} / 2) - 5.5rem);
+        bottom: calc(#{-$numbers-height} / 2);
         left: 50%;
         display: flex;
         justify-content: space-between;
@@ -67,10 +67,11 @@
         height: $numbers-height;
         transform: translateX(-50%);
         width: 110.3rem;
-        z-index: 1;
+        z-index: 7;
 
         &__group {
             position: relative;
+            text-align: center;
 
             &:not(:last-child)::after {
                 content: "";
@@ -96,6 +97,53 @@
             font-weight: 400;
             color: $primary-color;
             padding-top: 0.4rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .hero {
+        flex-direction: column;
+
+        &__text {
+            text-align: center;
+            padding-right: unset;
+
+            &__btn {
+                margin: 0 auto;
+            }
+
+            &__title {
+                font-size: 3.4rem;
+            }
+        }
+
+        &__numbers {
+            flex-direction: column;
+            width: 87%;
+            padding: 4rem 7rem;
+            height: $numbers-height-mobile;
+            bottom: calc(-#{$numbers-height-mobile} / 2);
+
+            &__group {
+                margin-bottom: 6rem;
+
+                &:last-of-type {
+                    margin-bottom: unset;
+                }
+            }
+        }
+
+        &__image {
+            padding-right: unset;
+
+            & img {
+                width: 80%;
+                margin-top: 6rem;
+                margin-left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: 18rem;
+            }
         }
     }
 }

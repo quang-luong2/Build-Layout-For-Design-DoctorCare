@@ -18,3 +18,20 @@
         }
     }
 }
+
+@media only screen and (max-width: 767px){
+    .sobre {
+        padding: 10rem 0;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+
+        &__image {
+            margin-top: 6rem;
+            width: unset;
+
+            & img {
+                width: 100%;
+            }
+        }
+    }
+}
